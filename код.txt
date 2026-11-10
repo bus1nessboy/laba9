@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    for (unsigned int i = 64; i <= 127; i++)
+    {
+        unsigned int x = i;
+        string y = "";
+        do {
+            unsigned int f = x % 2;
+            y = static_cast<char>(f + '0') + y;
+           x = x / 2;
+        } while (x > 0);
+        unsigned int ones = 0;
+        unsigned int zeros = 0;
+        for (unsigned int k = 0; k < y.length(); k++)
+        {
+            if (y[k] == '1') {
+                ones++;
+            }
+            else {
+                zeros++;
+            }
+        }
+        if (ones > zeros)
+        {
+            cout << y << " " << i<<endl;
+        }
+    }
+}
