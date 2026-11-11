@@ -28,4 +28,5 @@ int main()
         }
     }
 }
+amogus never dies
 amogus issssssssssss back gg
